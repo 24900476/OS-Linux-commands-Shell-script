@@ -224,7 +224,7 @@ egrep l{2} newfile
 
 egrep 's{1,2}' newfile
 ## OUTPUT 
-1[egrep](egrep1,2.png)
+![egrep](egrep1,2.png)
 
 
 cat > file23
@@ -286,18 +286,18 @@ sed -n -e '/tom/,/Joe/p' file23
 seq 10 
 ## OUTPUT
 
-
+![seq](seq10.png)
 
 seq 10 | sed -n '4,6p'
 ## OUTPUT
 
-![seq](seq10.png)
+![seq](seq46.png)
 
 
 seq 10 | sed -n '2,~4p'
 ## OUTPUT
 
-![seq](seq101.png)
+![seq](seq101.pn)
 
 seq 3 | sed '2a hello'
 ## OUTPUT
@@ -370,7 +370,7 @@ www. mrcet.... com
 cat urllist.txt | tr -d ' '
  ## OUTPUT
 
-![url](urllist.txt)
+![url](urlist.png)
  
 cat urllist.txt | tr -d ' ' | tr -s '.'
 ## OUTPUT
@@ -403,6 +403,7 @@ gzip backup.tar
 
 ls .gz
 ## OUTPUT
+
  
 gunzip backup.tar.gz
 ## OUTPUT
