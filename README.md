@@ -196,6 +196,7 @@ egrep '(World$)' newfile
 ## OUTPUT
 
 ![egrep](egrep6.png)
+
 egrep '((W|w)orld$)' newfile 
 ## OUTPUT
 
@@ -276,7 +277,6 @@ sed -n -e '1,5p' file23
 sed -n -e '2,/Joe/p' file23
 ## OUTPUT
 
-
 ![sed](sedjoe.png)
 
 sed -n -e '/tom/,/Joe/p' file23
@@ -297,7 +297,7 @@ seq 10 | sed -n '4,6p'
 seq 10 | sed -n '2,~4p'
 ## OUTPUT
 
-![seq](seq101.pn)
+![seq](seq101.png)
 
 seq 3 | sed '2a hello'
 ## OUTPUT
@@ -317,6 +317,7 @@ sed -n '2,4{s/^/$/;p}' file23
 
 
 sed -n '2,4{s/$/*/;p}' file23
+
 ![sed](sed-n.png)
 
 #Sorting File content
@@ -404,6 +405,7 @@ gzip backup.tar
 ls .gz
 ## OUTPUT
 
+![gz](ls.gz.png)
  
 gunzip backup.tar.gz
 ## OUTPUT
@@ -521,14 +523,12 @@ echo "$val1 is less than $val2"
 fi
 ```
 ##OUTPUT
-
-
-
 chmod 755 strcomp.sh
  
 ./strcomp.sh 
 ## OUTPUT
-![str](str.png)
+
+![str](./strcomp.png)
 
 # check file ownership
 cat < psswdperm.sh 
@@ -555,6 +555,8 @@ fi
  ```
 ./psswdperm.sh
 ## OUTPUT
+
+![pss](pss.png)
 
 # check if with file location
 cat>ifnested.sh 
@@ -602,7 +604,7 @@ fi
 ./ifnested.sh 
 ## OUTPUT
 
-
+![ifnested](ifnest.png)
 
 # using numeric test comparisons
 cat > iftest.sh 
@@ -645,6 +647,8 @@ $ chmod 755 iftest.sh
  
 $ ./iftest.sh 
 ##OUTPUT
+
+![iftest](iftest1.png)
 
 # check if a file
 cat > ifnested.sh 
@@ -692,8 +696,11 @@ fi
 
 $ chmod 755 ifnested.sh
  
-$ ./ifnested.sh 
+$ ./ifnested.sh
+
 ##OUTPUT
+
+![ifnested](ifnested.png)
 
 # looking for a possible value using elif
 cat elifcheck.sh 
@@ -723,6 +730,7 @@ $ chmod 755 elifcheck.sh
 $ ./elifcheck.sh 
 ## OUTPUT
 
+![elif](elifcheck.png)
 
 # testing compound comparisons
 cat> ifcompound.sh 
@@ -738,6 +746,8 @@ fi
 $ chmod 755 ifcompound.sh
 $ ./ifcompound.sh 
 ## OUTPUT
+
+![ifcompound](ifcompund.png)
 
 # using the case command
 cat >casecheck.sh 
@@ -758,6 +768,10 @@ $ chmod 755 casecheck.sh
  
 $ ./casecheck.sh 
  
+ ## Output 
+
+![cashcheck](cash.png)
+
 cat > whiletest
 ```bash
 #!/bin/bash
@@ -773,9 +787,13 @@ $ chmod 755 whiletest.sh
  
 $ ./whiletest.sh
  
- 
+ ## Output
+
+![whiletest](whiletest.png)
+
 cat untiltest.sh 
-```bash
+```
+bash
 \#using the until command
 var1=100
 until [ $var1 -eq 0 ]
@@ -783,11 +801,13 @@ do
 echo $var1
 var1=$[ $var1 - 25 ]
 done
-``` 
+
 $ chmod 755 untiltest.sh
+```
+ ## Output
  
- 
- 
+![untiltest](until.png)
+
 cat forin1.sh 
 ```bash
 \#!/bin/bash
@@ -796,11 +816,13 @@ for test in Alabama Alaska Arizona Arkansas California Colorado
 do
 echo The next state is $test
 done
- ```
+
  
 $ chmod 755 forin1.sh
- 
- 
+```
+## Output
+![forin1](forin1.png) 
+
 cat forin2.sh 
 ```bash
 \#!/bin/bash
@@ -809,10 +831,11 @@ for test in I don't know if this'll work
 do
 echo “word:$test”
 done
- ```
+
  
 $ chmod 755 forin2.sh
- 
+ ```
+
 cat forin2.sh 
 ```bash
 \#!/bin/bash
@@ -823,8 +846,11 @@ echo “word:$test”
 done
 ```
 $ chmod 755 forin2.sh
- 
+
 $ ./forin2.sh 
+ ## Output
+
+![forin2](forin2.png)
  
 cat forin3.sh 
 ```bash
@@ -834,9 +860,13 @@ for test in I don\'t know if "this'll" work
 do
 echo "word:$test"
 done
-```
+
 $ ./forin3.sh 
- 
+ ```
+ ## Output
+
+ ![forin3](forin3.png)
+
 cat forin1.sh 
 ```bash
 #!/bin/bash
@@ -845,10 +875,12 @@ for test in Alabama Alaska Arizona Arkansas California Colorado
 do
 echo The next state is $test
 done
-```
 $ chmod 755 forin1.sh
-
+```
 ## OUTPUT
+
+![forin1](forin11.png)
+
 cat forinfile.sh 
 ```bash
 #!/bin/bash
@@ -858,8 +890,11 @@ for state in `cat $file`
 do
 echo "Visit beautiful $file“
 done
-```
+
 $ chmod 777 forinfile.sh
+./forinfile.sh
+`
+
 $ cat cities
 Hyderabad
 Alampur
@@ -868,9 +903,10 @@ Warangal
 Adilabad
 Bhadrachalam
 Khammam
-
+```
 ## OUTPUT
 
+![cities](cities.png)
 
 cat forctype.sh 
 ```bash
@@ -880,10 +916,12 @@ for (( i=1; i <= 5; i++ ))
 do
 echo "The value of i is $i"
 done
-````
+```
 $ chmod 755 forctype.sh
 $ ./forctype.sh 
 ## OUTPUT
+
+![forcetype](force.png)
 
 cat forctype1.sh 
 ```bash
@@ -897,6 +935,8 @@ done
 $ chmod 755 forctype.sh
 $ ./forctype1.sh 
 ## OUTPUT
+
+![forcetype1](force1.png)
 
 cat fornested1.sh 
 ```bash
@@ -916,7 +956,8 @@ $ chmod 755 fornested1.sh
 $ ./fornested1.sh 
  ## OUTPUT
 
- 
+ ![Fornest](fornest.png)
+
 cat forbreak.sh 
 ```bash
 #!/bin/bash
@@ -933,11 +974,14 @@ echo "The for loop is completed“
 ```
 ## OUTPUT
 
+![forbreak](forbr.png)
+
+
 $ chmod 755 forbreak.sh
  
 $ ./forbreak.sh 
  
-cat forbreak.sh 
+cat forcontinue.sh 
 ```bash
 #!/bin/bash
 # breaking out of a for loop
@@ -958,6 +1002,8 @@ $ chmod 755 forcontinue.sh
 $ ./forcontinue.sh 
 ## OUTPUT
  
+![forcontinue](cont.png)
+
 cat exread.sh 
 ```bash
 #!/bin/bash
@@ -972,6 +1018,7 @@ $ chmod 755 exread.sh
 $ ./exread.sh 
 ## OUTPUT
 
+![exread](ex.png)
 
  cat exread1.sh
 ```bash
@@ -979,15 +1026,13 @@ $ ./exread.sh
 # testing the read command
 read -p "Enter your name: " name
 echo "Hello $name, welcome to my program. “
-``` 
+
 $ chmod 755 exread1.sh 
-
-## OUTPUT
-
-
-
 $ ./exread1.sh 
- 
+```
+## OUTPUT
+ ![exread1](ex1.png)
+
 cat funcex.sh
 ```bash
 #!/bin/bash
@@ -1006,10 +1051,12 @@ fi
 ## OUTPUT
  ./funcex.sh 
 
- 
+ ![funcex](func.png)
+
  ./funcex.sh 1 2
 
- 
+ ![func1](func1.png)
+
 cat argshift.sh
 ```bash
 #!/bin/bash 
@@ -1019,10 +1066,12 @@ cat argshift.sh
 done
 ```
 $ chmod 777 argshift.sh
+$ ./argshift.sh 1 2 3
 
 ## OUTPUT
-$ ./argshift.sh 1 2 3
- 
+
+ ![argshift](arg.png)
+
  cat argshift1.sh
 ```bash
  #/bin/bash 
@@ -1037,8 +1086,11 @@ for (( i=0;i<$ELEMENTS;i++)); do
 done
 ```
 $ chmod 777 argshift.sh
-## OUTPUT
 $ ./argshift.sh 1 2 3
+
+## OUTPUT
+
+![argshift1](arg1.png)
  
 cat argshift.sh
 ```bash
@@ -1050,9 +1102,11 @@ while (( "$#" )); do
 done
 set +x
 ```
-## OUTPUT
  ./argshift.sh 1 2 3
- 
+
+## OUTPUT
+
+![argshift](arg2.png)
  
 cat > nc.awk
 ```bash
@@ -1084,6 +1138,8 @@ ubcdfghj
 awk -f nc.awk data.dat
 ## OUTPUT 
  
+![nc](nc.png)
+
 cat > palindrome.sh
 ```bash
 #num=545
@@ -1111,6 +1167,7 @@ fi
 ```
 ## OUTPUT 
 
+![palindrome](palin.png)
 
 # RESULT:
 The Commands are executed successfully.
