@@ -42,26 +42,23 @@ s.n. dasgupta
 ### Display the content of the files
 cat < file1
 ## OUTPUT
-![catfile1](image.png)
+
 
 
 cat < file2
 ## OUTPUT
-![catfile2](osfile2.png)
+
 
 # Comparing Files
 cmp file1 file2
 ## OUTPUT
-![cmpfile1file2](os3.png)
  
 comm file1 file2
  ## OUTPUT
- ![commfile1file2](os4.png)
 
  
 diff file1 file2
 ## OUTPUT
-![difffile1file2](diff.png)
 
 
 #Filters
@@ -86,17 +83,16 @@ cat > file22
 cut -c1-3 file11
 ## OUTPUT
 
-![cut](cutfil11.png)
+
 
 
 cut -d "|" -f 1 file22
 ## OUTPUT
 
-![cut2](cutfil22.png)
+
 
 cut -d "|" -f 2 file22
 ## OUTPUT
-![cut](cut22.png)
 
 
 cat < newfile 
@@ -104,48 +100,47 @@ cat < newfile
 Hello world
 hello world
 ^d
-```
-```
+````
 cat > newfile 
 Hello world
 hello world
-```
+ 
 grep Hello newfile 
 ## OUTPUT
-![grep](grep1.png)
+
 
 
 grep hello newfile 
 ## OUTPUT
-![grep](grep2.png)
+
 
 
 
 grep -v hello newfile 
 ## OUTPUT
-![grep3](grep3.png)
+
 
 
 cat newfile | grep -i "hello"
 ## OUTPUT
 
-![catnewfile](newgrep.png)
+
 
 
 cat newfile | grep -i -c "hello"
 ## OUTPUT
 
-![catnewfile](grep4.png)
+
 
 
 grep -R ubuntu /etc
 ## OUTPUT
 
-![ubuntu](ubuntu.png)
+
 
 grep -w -n world newfile   
 ## OUTPUT
-![grep](grep5.png)
+
 
 cat < newfile 
 ```
@@ -168,24 +163,24 @@ Linux is best in this World
  ```
 egrep -w 'Hello|hello' newfile 
 ## OUTPUT
-![egrep](egrep1.png)
+
 
 
 egrep -w '(H|h)ello' newfile 
 ## OUTPUT
-![egrep](egrep2.png)
+
 
 
 egrep -w '(H|h)ell[a-z]' newfile 
 ## OUTPUT
 
-![egrep](egrep3.png)
+
 
 
 egrep '(^hello)' newfile 
 ## OUTPUT
 
-![egrep](egrep4.png)
+
 
 egrep '(world$)' newfile 
 ## OUTPUT
@@ -194,7 +189,7 @@ egrep '(world$)' newfile
 
 egrep '(World$)' newfile 
 ## OUTPUT
-![grep](eg5.png)
+
 
 egrep '((W|w)orld$)' newfile 
 ## OUTPUT
@@ -204,7 +199,7 @@ egrep '((W|w)orld$)' newfile
 egrep '[1-9]' newfile 
 ## OUTPUT
 
-![egrep](.)
+
 
 egrep 'Linux.*world' newfile 
 ## OUTPUT
