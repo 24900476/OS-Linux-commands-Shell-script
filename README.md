@@ -190,37 +190,41 @@ egrep '(^hello)' newfile
 egrep '(world$)' newfile 
 ## OUTPUT
 
-
+![egrep](eg5.png)
 
 egrep '(World$)' newfile 
 ## OUTPUT
-![grep](eg5.png)
 
+![egrep](egrep6.png)
 egrep '((W|w)orld$)' newfile 
 ## OUTPUT
 
-
+![egrep](egrep7.png)
 
 egrep '[1-9]' newfile 
 ## OUTPUT
+![egrep](egrep8.png)
 
-![egrep](.)
 
 egrep 'Linux.*world' newfile 
 ## OUTPUT
+![egrep](lworld.png)
 
 
 egrep 'Linux.*World' newfile 
 ## OUTPUT
+![egrep](lWorld.png)
 
 
 egrep l{2} newfile
 ## OUTPUT
 
+![egrep](egrepnewfile.png)
 
 
 egrep 's{1,2}' newfile
 ## OUTPUT 
+1[egrep](egrep1,2.png)
 
 
 cat > file23
@@ -240,43 +244,44 @@ cat > file23
 sed -n -e '3p' file23
 ## OUTPUT
 
-
+![sed](sed23.png)
 
 sed -n -e '$p' file23
 ## OUTPUT
 
 
+![sed](sed23$.png)
 
 sed  -e 's/Ram/Sita/' file23
 ## OUTPUT
 
-
+![sed](sed1.png)
 
 sed  -e '2s/Ram/Sita/' file23
 ## OUTPUT
 
-
+![sed](sed2.png)
 
 sed  '/tom/s/5000/6000/' file23
 ## OUTPUT
 
+![sed](tom.png)
 
 
 sed -n -e '1,5p' file23
 ## OUTPUT
 
-
+![sed](sed123.png)
 
 sed -n -e '2,/Joe/p' file23
 ## OUTPUT
 
 
-
+![sed](sedjoe.png)
 
 sed -n -e '/tom/,/Joe/p' file23
 ## OUTPUT
-
-
+![sed](sed3.png)
 
 seq 10 
 ## OUTPUT
@@ -286,33 +291,33 @@ seq 10
 seq 10 | sed -n '4,6p'
 ## OUTPUT
 
+![seq](seq10.png)
 
 
 seq 10 | sed -n '2,~4p'
 ## OUTPUT
 
-
+![seq](seq101.png)
 
 seq 3 | sed '2a hello'
 ## OUTPUT
-
-
+![seq](seq3.png)
 
 seq 2 | sed '2i hello'
 ## OUTPUT
-
+![seq](seq2.png)
 
 seq 10 | sed '2,9c hello'
 ## OUTPUT
-
+![seq](seq1029c.png)
 
 sed -n '2,4{s/^/$/;p}' file23
 ## OUTPUT
-
+![seq](sedfile23.png)
 
 
 sed -n '2,4{s/$/*/;p}' file23
-
+![sed](sed-n.png)
 
 #Sorting File content
 cat > file21
@@ -326,6 +331,7 @@ cat > file21
 sort file21
 ## OUTPUT
 
+![sort](sort.png)
 
 cat > file22
 ```
@@ -339,12 +345,14 @@ cat > file22
 uniq file22
 ## OUTPUT
 
-
+![uniq](uniq.png)
 
 #Using tr command
 
 cat file23 | tr [:lower:] [:upper:]
  ## OUTPUT
+
+![lowerupper](lowup.png)
 
 cat < urllist.txt
 ```
@@ -362,17 +370,18 @@ www. mrcet.... com
 cat urllist.txt | tr -d ' '
  ## OUTPUT
 
-
+![url](urllist.txt)
  
 cat urllist.txt | tr -d ' ' | tr -s '.'
 ## OUTPUT
 
 
+![caturl](caturl.png)
 
 #Backup commands
 tar -cvf backup.tar *
 ## OUTPUT
-
+![backup](backup.png)
 
 mkdir backupdir
  
@@ -383,9 +392,12 @@ cd backupdir
 tar -tvf backup.tar
 ## OUTPUT
 
+![tar](tvf.png)
 
 tar -xvf backup.tar
 ## OUTPUT
+
+![xvf](xvf.png)
 
 gzip backup.tar
 
@@ -395,6 +407,7 @@ ls .gz
 gunzip backup.tar.gz
 ## OUTPUT
 
+![gunzip](gunzip.png)
  
 # Shell Script
 ```
@@ -405,6 +418,7 @@ chmod 755 my-script.sh
 ./my-script.sh
 ## OUTPUT
 
+![echo](echo.png)
  
 cat << stop > herecheck.txt
 ```
@@ -417,6 +431,7 @@ stop
 cat herecheck.txt
 ## OUTPUT
 
+![herecheck](herecheck.png)
 
 cat < scriptest.sh 
 ```bash
@@ -455,12 +470,14 @@ chmod 777 scriptest.sh
 
 ## OUTPUT
 
+![script](script.png))
  
 ls file1
 ## OUTPUT
+![file1](lsf1.png)
 
 echo $?
-## OUTPUT 
+## OUTPUT
 ./one
 bash: ./one: Permission denied
  
@@ -472,7 +489,7 @@ abcd
 echo $?
  ## OUTPUT
 
-
+![echo](ls$.png)
  
 # mis-using string comparisons
 
@@ -510,7 +527,7 @@ chmod 755 strcomp.sh
  
 ./strcomp.sh 
 ## OUTPUT
-
+![str](str.png)
 
 # check file ownership
 cat < psswdperm.sh 
